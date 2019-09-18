@@ -1,6 +1,6 @@
 {
 	"name": "compass-management",
-	"exportDir": "dist",
+	"exportDir": "public",
 	"minify": true,
 	"compile": true,
 	"exclusions": [
