@@ -1,9 +1,10 @@
-@import "normalize";
+@import "normalize.scss";
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+* { box-sizing: border-box }
 
 body {
   font-family: lato, sans-serif;
-  box-sizing: border-box;
   line-height: 1.4;
   word-break: break-word;
   font-kerning: auto;
@@ -43,7 +44,7 @@ nav {
     display: flex;
     align-items: center;
     padding: 1rem;
-    margin: -1rem 0;
+    border-radius: 3px;
     text-decoration: none;
     color: #fff;
     height: 40px;
@@ -59,26 +60,15 @@ nav {
     }
   }
 }
-
 section {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 p {
   font-size: 1.2rem;
   margin: 0 0 1rem;
-}
-
-ul {
-  align-self: center;
-}
-
-li {
-  max-width: 45rem;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
 }
 
 .title {
@@ -103,6 +93,12 @@ li {
     left: 0;
   }
 }
+
+.title-small {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
 
 .profile {
   display: flex;
@@ -147,6 +143,53 @@ li {
   background-blend-mode: multiply;
   background-color: rgba(#052744, 0.88);
   text-shadow: 0 1px 1px #000;
+
+  ul {
+    align-self: center;
+  }
+  
+  li {
+    max-width: 45rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.services {
+  ul {
+    margin: 0;
+    padding-left: 1.3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 45rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input, textarea {
+  display: block;
+  margin-bottom: 1rem;
+  border: 1px solid #4682b4;
+  border-radius: 3px;
+  padding: 0.5rem;
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    box-shadow: 0px 3px 4px rgba(#052744, 0.2)
+  }
 }
 
 @media (max-width: 1000px) {
@@ -160,5 +203,9 @@ li {
 @media (max-width: 500px) {
   html {
     font-size: 14px;
+  }
+
+  section {
+    padding: 1.5rem;
   }
 }
