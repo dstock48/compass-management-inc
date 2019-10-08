@@ -77,22 +77,22 @@
       </section>
       <section>
         <h2 class="title">Contact</h2>
-        <form action="https://formspree.io/pgschaedel@gmail.com" method="POST" />
+        <form id="contact-form" action="https://formspree.io/pgschaedel@gmail.com" method="POST" />
           <label for="name">
             Name
           </label>
-          <input id="name" type="text" name="name">
+          <input class="input" id="name" type="text" name="name">
 
           <label for="email">
             E-Mail
           </label>
-          <input id="email" type="text" name="email">
+          <input class="input" id="email" type="text" name="email">
 
           <label for="message">
             Message
           </label>
-          <textarea id="message" name="message" rows="10"></textarea>
-          <button class="btn">Submit</button>
+          <textarea class="input" id="message" name="message" rows="10"></textarea>
+          <button disabled class="btn">Submit</button>
         </form>
       </section>
     </div>
