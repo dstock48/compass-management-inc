@@ -12,7 +12,7 @@
 
   <body>
     <div class="container">
-      <header>
+      <header id="navbar">
         <img class="logo" src="assets/logo_white.svg" alt="CMS Logo" />
         <nav>
           <a class="nav-link active" href="#">Home</a>
@@ -97,5 +97,12 @@
       </section>
     </div>
     <script src="scripts/main.js"></script>
+    <script>
+      document.querySelector('#contact-form').addEventListener('input', () => {
+        const button = document.querySelector('#contact-form .btn')
+        const inputs = document.querySelectorAll('#contact-form .input')
+        button.disabled = !Array.from(inputs).every(input => input.value)
+      })
+    </script>
   </body>
 </html>
